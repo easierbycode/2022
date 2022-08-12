@@ -75,7 +75,7 @@ export function initObjects() {
 
     if (Constants.IS_TOUCH_DEVICE) {
         createTouchEvents()
-        addInfoButton.call(this)
+        // addInfoButton.call(this)
     }
 
     if (!Properties.gameIsLoaded) {
@@ -258,22 +258,22 @@ function touchesElement(el, pointX, pointY) {
     return pointX >= x && pointX <= x + width && pointY >= y && pointY <= y + height
 }
 
-function addInfoButton() {
-    let info = this.add.image(48, 32, 'info').setName('info')
-    info.setOrigin(0, 0).setScrollFactor(0).setDepth(Constants.DEPTH.important * 2)
-    info.setInteractive()
-    info.on('pointerup', () => {
-        let removePopup = function() {
-            // Hide popup and close event listener
-            INFO_POPUP.style.display = 'none'
-            INFO_POPUP.children[0].removeEventListener('click', removePopup)
-            // Enable input
-            Properties.inputEnabled = true
-        }
-        // Show popup and add close event listener
-        INFO_POPUP.style.display = 'flex'
-        INFO_POPUP.children[0].addEventListener('click', removePopup)
-        // Disable input
-        Properties.inputEnabled = false
-    })
-}
+// function addInfoButton() {
+//     let info = this.add.image(48, 32, 'info').setName('info')
+//     info.setOrigin(0, 0).setScrollFactor(0).setDepth(Constants.DEPTH.important * 2)
+//     info.setInteractive()
+//     info.on('pointerup', () => {
+//         let removePopup = function() {
+//             // Hide popup and close event listener
+//             INFO_POPUP.style.display = 'none'
+//             INFO_POPUP.children[0].removeEventListener('click', removePopup)
+//             // Enable input
+//             Properties.inputEnabled = true
+//         }
+//         // Show popup and add close event listener
+//         INFO_POPUP.style.display = 'flex'
+//         INFO_POPUP.children[0].addEventListener('click', removePopup)
+//         // Disable input
+//         Properties.inputEnabled = false
+//     })
+// }
