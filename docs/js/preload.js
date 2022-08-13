@@ -170,15 +170,18 @@ function preloadButtons() {
 }
 
 function preloadLevel0() {
-    this.load.image('0-ball', `${CDN_URL}/assets/level0/tennisball.png`)
+    this.load.image('0-ball', `${CDN_URL}/assets/level0/tweet.png`)
     this.load.image('0-test-tube-blue', `${CDN_URL}/assets/level0/test-tube-blue.png`)
     this.load.image('0-test-tube-red', `${CDN_URL}/assets/level0/test-tube-red.png`)
 
     this.load.spritesheet('0-bird', `${CDN_URL}/assets/level0/trumpigeon.png`, {
         frameWidth: 38, frameHeight: 25
     })
-    this.load.spritesheet('0-claire', `${CDN_URL}/assets/level0/claire.png`, {
-        frameWidth: 16, frameHeight: 16
+    // this.load.spritesheet('0-claire', `${CDN_URL}/assets/level0/claire.png`, {
+    //     frameWidth: 16, frameHeight: 16
+    // })
+    this.load.spritesheet('0-claire', `${CDN_URL}/assets/level0/elon.png`, {
+        frameWidth: 14, frameHeight: 21
     })
     this.load.spritesheet('0-tube', `${CDN_URL}/assets/level0/tube.png`, {
         frameWidth: 238, frameHeight: 384

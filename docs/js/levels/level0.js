@@ -80,7 +80,7 @@ export default {
                 // Play animation
                 claire.anims.play('0-claire');
                 // Move Claire to the right
-                claire.body.setVelocityX(600)
+                claire.body.setVelocityX(450)
             })
         })
     }
@@ -102,18 +102,36 @@ function saveClaire(image) {
     // Set origin and refresh body
     claire.setOrigin(0, 1).refreshBody()
     // Resize
-    claire.setScale(3)
+    claire.setScale(6)
     // Flip horizontally
     claire.flipX = true
     // Create animation for Claire
-    if (!Properties.scene.anims.exists('0-claire')) {
         Properties.scene.anims.create({
             key: '0-claire',
-            frames: Properties.scene.anims.generateFrameNumbers('0-claire', { start: 1, end: 2 }),
+            frames: [
+                { key: '0-claire', frame: 2 },
+                { key: '0-claire', frame: 4 }
+            ],
+            frameRate: 24,
+            repeat: -1
+        })
+        Properties.scene.anims.create({
+            key: '0-claire-idle',
+            frames: [
+                { key: '0-claire', frame: 0 },
+                { key: '0-claire', frame: 1 },
+                { key: '0-claire', frame: 0 },
+                { key: '0-claire', frame: 1 },
+                { key: '0-claire', frame: 2 },
+                { key: '0-claire', frame: 1 },
+                { key: '0-claire', frame: 2 }
+
+            ],
             frameRate: 5,
             repeat: -1
         })
-    }
+    // Play animation
+    claire.anims.play('0-claire-idle')
 }
 function updateCandle( candleImage ) {
     let {x, y}          = candleImage
