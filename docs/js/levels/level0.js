@@ -64,7 +64,7 @@ export default {
         })
     },
     showTitle: function() {
-        fadeInOutTitle('2019')
+        fadeInOutTitle('2022')
     },
     throwBall: function() {
         // Get control
