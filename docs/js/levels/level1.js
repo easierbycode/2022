@@ -178,7 +178,7 @@ export default {
         // Destroy intro music
         AudioManager.fadeOut('intro', 100, () => AudioManager.destroy('intro'))
         // Set text and size
-        Properties.titleText.setText('2020!')
+        Properties.titleText.setText('2022!')
         Properties.titleText.setFontSize(96)
         // Show text
         Properties.titleText.alpha = 1
